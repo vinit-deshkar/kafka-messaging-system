@@ -1,4 +1,4 @@
-# 1️⃣ Setup Kafka, Zookeeper and Kafbat UI
+# Setup Kafka, Zookeeper and Kafbat UI
 
 Run zookeeper, kafka and kafbat UI:
 
@@ -9,10 +9,16 @@ docker-compose up -d
 Visit Kafbat UI: http://localhost:8080
 
 - From the Kafbat UI:
-    - Create a new cluster with name: local-cluser
-    - Set bootstrap server:
-        - host - kafka
-        - port - 29092 (default)
+  - Create a new cluster with name: local-cluser
+  - Set bootstrap server:
+    - host - kafka
+    - port - 29092 (default)
+
+---
+
+# Kafka Messaging System Architecture Diagram
+
+![Kafka Architecture](./kafka-messaging-system.png)
 
 ---
 
@@ -25,6 +31,7 @@ A concise guide to commonly used Kafka command-line tools for managing topics, b
 ## 1️⃣ Kafka Topics Management
 
 ### 🔹 Create a New Topic
+
 ```bash
 kafka-topics --create \
   --topic <topic-name> \
@@ -41,6 +48,7 @@ kafka-topics --create \
 ---
 
 ### 🔹 List All Topics
+
 ```bash
 kafka-topics --list --bootstrap-server localhost:9092
 ```
@@ -48,6 +56,7 @@ kafka-topics --list --bootstrap-server localhost:9092
 ---
 
 ### 🔹 Describe a Topic
+
 ```bash
 kafka-topics --describe --topic <topic-name> --bootstrap-server localhost:9092
 ```
@@ -55,6 +64,7 @@ kafka-topics --describe --topic <topic-name> --bootstrap-server localhost:9092
 ---
 
 ### 🔹 Delete a Topic
+
 ```bash
 kafka-topics --delete --topic <topic-name> --bootstrap-server localhost:9092
 ```
@@ -66,6 +76,7 @@ kafka-topics --delete --topic <topic-name> --bootstrap-server localhost:9092
 ## 2️⃣ Producing & Consuming Messages
 
 ### 🔹 Start a Producer
+
 ```bash
 kafka-console-producer --topic <topic-name> --bootstrap-server localhost:9092
 ```
@@ -73,6 +84,7 @@ kafka-console-producer --topic <topic-name> --bootstrap-server localhost:9092
 ---
 
 ### 🔹 Start a Consumer
+
 ```bash
 kafka-console-consumer \
   --topic <topic-name> \
@@ -85,11 +97,13 @@ kafka-console-consumer \
 ## 3️⃣ Managing Consumer Groups
 
 ### 🔹 List All Consumer Groups
+
 ```bash
 kafka-consumer-groups --list --bootstrap-server localhost:9092
 ```
 
 ### 🔹 Describe a Consumer Group
+
 ```bash
 kafka-consumer-groups \
   --describe \
@@ -98,6 +112,7 @@ kafka-consumer-groups \
 ```
 
 ### 🔹 Reset Consumer Group Offset
+
 ```bash
 kafka-consumer-groups \
   --reset-offsets \
@@ -113,11 +128,13 @@ kafka-consumer-groups \
 ## 4️⃣ Kafka Cluster Management
 
 ### 🔹 Check Broker API Versions
+
 ```bash
 kafka-broker-api-versions --bootstrap-server localhost:9092
 ```
 
 ### 🔹 Describe Cluster (Broker Info)
+
 ```bash
 kafka-cluster --describe --bootstrap-server localhost:9092
 ```
@@ -127,21 +144,25 @@ kafka-cluster --describe --bootstrap-server localhost:9092
 ## 5️⃣ Admin Commands
 
 ### 🔹 Start Zookeeper
+
 ```bash
 zookeeper-server-start.sh config/zookeeper.properties
 ```
 
 ### 🔹 Start Kafka Broker
+
 ```bash
 kafka-server-start.sh config/server.properties
 ```
 
 ### 🔹 Stop Kafka Broker
+
 ```bash
 kafka-server-stop.sh
 ```
 
 ### 🔹 Stop Zookeeper
+
 ```bash
 zookeeper-server-stop.sh
 ```
@@ -151,6 +172,7 @@ zookeeper-server-stop.sh
 ## 6️⃣ Kafka Performance Testing
 
 ### 🔹 Test Producer Performance
+
 ```bash
 kafka-producer-perf-test \
   --topic <topic-name> \
@@ -161,6 +183,7 @@ kafka-producer-perf-test \
 ```
 
 ### 🔹 Test Consumer Performance
+
 ```bash
 kafka-consumer-perf-test \
   --topic <topic-name> \
@@ -173,16 +196,19 @@ kafka-consumer-perf-test \
 ## 7️⃣ Debugging & Troubleshooting
 
 ### 🔹 Check Kafka-Zookeeper Connection
+
 ```bash
 echo dump | nc localhost 2181
 ```
 
 ### 🔹 List Active Kafka Topics
+
 ```bash
 kafka-topics --list --bootstrap-server localhost:9092
 ```
 
 ### 🔹 List Active Consumer Groups
+
 ```bash
 kafka-consumer-groups --list --bootstrap-server localhost:9092
 ```

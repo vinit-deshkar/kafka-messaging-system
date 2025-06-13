@@ -398,28 +398,31 @@
           <mxGeometry x="-362.5" y="578.5" width="160" height="47" as="geometry" />
         </mxCell>
         <mxCell id="Ph5wCU0-K9e3c29uHrLq-43" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="2260" y="134" width="201.25" height="366.5" as="geometry" />
+          <mxGeometry x="1983.62" y="410" width="201.25" height="366.5" as="geometry" />
         </mxCell>
         <mxCell id="GaDDl_syNcWeDKOd6O43-12" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;fontStyle=1;strokeWidth=2;strokeColor=#6A6A6A;" vertex="1" parent="1">
           <mxGeometry x="1076" y="190" width="184" height="220" as="geometry" />
         </mxCell>
         <mxCell id="Ph5wCU0-K9e3c29uHrLq-44" value="&lt;span style=&quot;color: light-dark(rgb(0, 150, 255), rgb(237, 237, 237));&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: light-dark(rgb(0, 150, 255), rgb(237, 237, 237));&quot;&gt;Analytics&lt;/span&gt; Kafka Consumer&amp;nbsp;&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="2279.38" y="150" width="162.5" height="70" as="geometry" />
+          <mxGeometry x="2003" y="426" width="162.5" height="70" as="geometry" />
         </mxCell>
         <mxCell id="Ph5wCU0-K9e3c29uHrLq-45" value="&lt;span style=&quot;color: light-dark(rgb(255, 47, 146), rgb(237, 237, 237));&quot;&gt;&lt;b&gt;Location Kafka Consumer&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="2279.38" y="253.5" width="162.5" height="70" as="geometry" />
+          <mxGeometry x="2003" y="529.5" width="162.5" height="70" as="geometry" />
         </mxCell>
         <mxCell id="GaDDl_syNcWeDKOd6O43-41" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;fontStyle=1;strokeWidth=2;strokeColor=#6A6A6A;" vertex="1" parent="1">
           <mxGeometry x="1076" y="560" width="180" height="220" as="geometry" />
         </mxCell>
         <mxCell id="Ph5wCU0-K9e3c29uHrLq-46" value="&lt;div align=&quot;center&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 142, 0), rgb(237, 237, 237));&quot;&gt;&lt;b&gt;Notification Kafka Consumer&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" vertex="1" parent="1">
-          <mxGeometry x="2273.75" y="358.78" width="175.25" height="61.22" as="geometry" />
+          <mxGeometry x="1997.37" y="634.78" width="175.25" height="61.22" as="geometry" />
         </mxCell>
         <mxCell id="Ph5wCU0-K9e3c29uHrLq-47" value="Location Consumer Service " style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="2268.69" y="440" width="175.12" height="30" as="geometry" />
+          <mxGeometry x="1992.31" y="716" width="175.12" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Ph5wCU0-K9e3c29uHrLq-4" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;fontStyle=1;strokeWidth=2;strokeColor=#6A6A6A;" vertex="1" parent="1">
           <mxGeometry x="1077.88" y="965.5" width="190.25" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="IyZ6i8cVqJSylHsxdSvF-1" value="&lt;b&gt;Location Consumer Service (Logical Structure)&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1940" y="790.5" width="290" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
