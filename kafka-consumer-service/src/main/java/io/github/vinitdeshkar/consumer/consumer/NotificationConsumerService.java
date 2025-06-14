@@ -27,12 +27,13 @@ public class NotificationConsumerService {
 
             logger.info(
                     """
-                    ---------------------------------------------------------------------------------
+                    
+                    -----------------------------------------------------------------------
                     📢 Notification consumer received an update for driver: {}
                     📍 Coordinates: {}, {}
                     🕒 Time       : {}
                     📱 Sending push notifications for driver: {}
-                    ---------------------------------------------------------------------------------
+                    -----------------------------------------------------------------------
                     """,
                     location.getDriverId(),
                     String.format("%.4f", location.getLatitude()),

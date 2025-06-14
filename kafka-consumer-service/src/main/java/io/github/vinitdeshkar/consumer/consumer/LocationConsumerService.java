@@ -25,14 +25,15 @@ public class LocationConsumerService {
 
             logger.info(
                     """
-                    ---------------------------------------------------------------------------------
+                    
+                    -----------------------------------------------------------------------
                     📡 Location consumer received an update for driver: {}
                     🌍 Country Code: {}
                     📍 Coordinates: {}, {}
                     🕒 Time       : {}
                     📨 Rider notified: Driver {} location updated.
                     📨 Shared users notified: Driver {} location updated.
-                    ---------------------------------------------------------------------------------
+                    -----------------------------------------------------------------------
                     """,
                     location.getDriverId(),
                     location.getCountryCode(),

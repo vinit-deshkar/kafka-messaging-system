@@ -27,12 +27,13 @@ public class AnalyticsConsumerService {
 
             logger.info(
                     """
-                    ---------------------------------------------------------------------------------
+                    
+                    -----------------------------------------------------------------------
                     📊 Analytics consumer received location update for driver: {}
                     📍 Coordinates: {}, {}
                     🕒 Time       : {}
                     📈 Processing driver location for analytics: {}
-                    ---------------------------------------------------------------------------------
+                    -----------------------------------------------------------------------
                     """,
                     location.getDriverId(),
                     String.format("%.4f", location.getLatitude()),
