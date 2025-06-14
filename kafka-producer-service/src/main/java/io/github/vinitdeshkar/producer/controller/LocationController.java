@@ -1,8 +1,8 @@
-package io.github.vinitdeshkar.consumer.controller;
+package io.github.vinitdeshkar.producer.controller;
 
 
-import io.github.vinitdeshkar.consumer.model.DriverLocation;
-import io.github.vinitdeshkar.consumer.service.LocationPublisherService;
+import io.github.vinitdeshkar.producer.model.DriverLocation;
+import io.github.vinitdeshkar.producer.service.LocationPublisherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

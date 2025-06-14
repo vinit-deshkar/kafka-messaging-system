@@ -1,10 +1,10 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="kafka-producer-service" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="io.github.vinitdeshkar.consumer.DriverLocationProducerApplication" />
+    <option name="MAIN_CLASS_NAME" value="io.github.vinitdeshkar.producer.DriverLocationProducerApplication" />
     <module name="kafka-producer-service" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="io.github.vinitdeshkar.consumer.*" />
+        <option name="PATTERN" value="io.github.vinitdeshkar.consumer.producer.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

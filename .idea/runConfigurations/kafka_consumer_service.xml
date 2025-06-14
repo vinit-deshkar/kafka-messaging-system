@@ -4,7 +4,7 @@
     <module name="kafka-consumer-service" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="io.github.vinitdeshkar.consumer.*" />
+        <option name="PATTERN" value="io.github.vinitdeshkar.consumer.producer.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

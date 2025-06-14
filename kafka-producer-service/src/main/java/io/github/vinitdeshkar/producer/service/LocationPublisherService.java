@@ -1,8 +1,8 @@
 
-package io.github.vinitdeshkar.consumer.service;
+package io.github.vinitdeshkar.producer.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.github.vinitdeshkar.consumer.model.DriverLocation;
+import io.github.vinitdeshkar.producer.model.DriverLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.*;
