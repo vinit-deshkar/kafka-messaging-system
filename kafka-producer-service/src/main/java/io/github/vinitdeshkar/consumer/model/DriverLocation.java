@@ -1,4 +1,4 @@
-package io.github.vinitdeshkar.producer.model;
+package io.github.vinitdeshkar.consumer.model;
 
 public class DriverLocation {
 

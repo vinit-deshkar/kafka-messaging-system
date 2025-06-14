@@ -1,6 +1,6 @@
-package io.github.vinitdeshkar.producer.consumer;
+package io.github.vinitdeshkar.consumer.consumer;
 
-import io.github.vinitdeshkar.producer.model.DriverLocation;
+import io.github.vinitdeshkar.consumer.model.DriverLocation;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
@@ -25,12 +25,22 @@ public class NotificationConsumerService {
 
             DriverLocation location = objectMapper.readValue(value, DriverLocation.class);
 
-            System.out.println("---------------------------------------------------------------------------------");
-            System.out.println("📢 Notification consumer received an update for driver " + location.getDriverId());
-            System.out.println("📍 Coordinates: " + location.getLatitude() + ", " + location.getLongitude());
-            System.out.println("🕒 Time: " + location.getTimestamp());
+            logger.info(
+                    """
+                    ---------------------------------------------------------------------------------
+                    📢 Notification consumer received an update for driver: {}
+                    📍 Coordinates: {}, {}
+                    🕒 Time       : {}
+                    📱 Sending push notifications for driver: {}
+                    ---------------------------------------------------------------------------------
+                    """,
+                    location.getDriverId(),
+                    String.format("%.4f", location.getLatitude()),
+                    String.format("%.4f", location.getLongitude()),
+                    location.getTimestamp(),
+                    location.getDriverId()
+            );
             sendNotifications(location);
-            System.out.println("---------------------------------------------------------------------------------");
 
         } catch (Exception e) {
             logger.error("Error occurred while consuming driver location: ", e);
@@ -38,6 +48,6 @@ public class NotificationConsumerService {
     }
 
     private void sendNotifications(DriverLocation location) {
-        System.out.println("📱 Sending push notifications for driver: " + location.getDriverId());
+        //  System.out.println("📱 Sending push notifications to rider: " + location.getDriverId());
     }
 } 

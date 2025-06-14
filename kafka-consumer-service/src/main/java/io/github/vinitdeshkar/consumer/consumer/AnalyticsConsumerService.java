@@ -1,6 +1,6 @@
-package io.github.vinitdeshkar.producer.consumer;
+package io.github.vinitdeshkar.consumer.consumer;
 
-import io.github.vinitdeshkar.producer.model.DriverLocation;
+import io.github.vinitdeshkar.consumer.model.DriverLocation;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
@@ -25,19 +25,30 @@ public class AnalyticsConsumerService {
 
             DriverLocation location = objectMapper.readValue(value, DriverLocation.class);
 
-            System.out.println("---------------------------------------------------------------------------------");
-            System.out.println("📊 Analytics consumer received location update for driver " + location.getDriverId());
-            System.out.println("📍 Coordinates: " + location.getLatitude() + ", " + location.getLongitude());
-            System.out.println("🕒 Time: " + location.getTimestamp());
-            processForAnalytics(location);
-            System.out.println("---------------------------------------------------------------------------------");
+            logger.info(
+                    """
+                    ---------------------------------------------------------------------------------
+                    📊 Analytics consumer received location update for driver: {}
+                    📍 Coordinates: {}, {}
+                    🕒 Time       : {}
+                    📈 Processing driver location for analytics: {}
+                    ---------------------------------------------------------------------------------
+                    """,
+                    location.getDriverId(),
+                    String.format("%.4f", location.getLatitude()),
+                    String.format("%.4f", location.getLongitude()),
+                    location.getTimestamp(),
+                    location.getDriverId()
+            );
 
+            // Now just call the core logic without logging again
+            processForAnalytics(location);
         } catch (Exception e) {
             logger.error("Error occurred while consuming driver location: ", e);
         }
     }
 
     private void processForAnalytics(DriverLocation location) {
-        System.out.println("📈 Processing driver location for analytics: " + location.getDriverId());
+        // System.out.println("📈 Processing driver location for analytics: " + location.getDriverId());
     }
 } 
